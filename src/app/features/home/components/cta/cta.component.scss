@@ -1,0 +1,61 @@
+.cta {
+  position: relative;
+  padding: 8rem var(--pad);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ── Background ───────────────────────────────────────────── */
+.cta-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--surface);
+}
+
+.cta-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 80% at 50% 50%,
+    rgba(77, 122, 40, 0.08) 0%,
+    transparent 70%
+  );
+}
+
+.cta-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* ── Content ──────────────────────────────────────────────── */
+.cta-content {
+  position: relative;
+  z-index: 1;
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 1rem;
+    line-height: 1.15;
+
+    em {
+      font-style: italic;
+      color: var(--amber);
+    }
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--text-dim);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    max-width: 500px;
+    margin-inline: auto;
+    line-height: 1.7;
+  }
+}

@@ -1,0 +1,84 @@
+.menu {
+  padding: 8rem 0;
+  background: var(--bg-3);
+}
+
+.menu-header {
+  margin-bottom: 2.5rem;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────── */
+.menu-tabs {
+  display: flex;
+  width: fit-content;
+  gap: 0.4rem;
+  margin-bottom: 3rem;
+}
+
+.menu-tab {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  padding: 0.65rem 1.8rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  cursor: pointer;
+  border-radius: 24px;
+  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
+
+  &.active,
+  &:hover {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: #fff;
+  }
+}
+
+/* ── Grid ─────────────────────────────────────────────────── */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  column-gap: 4rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s ease;
+
+  h4 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    line-height: 1.55;
+  }
+}
+
+.menu-price {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--amber);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .menu-grid { grid-template-columns: 1fr; column-gap: 0; }
+  .menu-tabs { flex-wrap: wrap; }
+}
