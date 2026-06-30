@@ -82,3 +82,8 @@
   .menu-grid { grid-template-columns: 1fr; column-gap: 0; }
   .menu-tabs { flex-wrap: wrap; }
 }
+
+@media (max-width: 480px) {
+  .menu { padding: 4rem 0; }
+  .menu-tab { padding: 0.55rem 1.2rem; font-size: 0.75rem; }
+}
